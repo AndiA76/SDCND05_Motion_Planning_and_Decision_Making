@@ -1,23 +1,47 @@
 # SDCND05_Motion_Planning_and_Decision_Making
 Project 5 of Udacity's "Self-Driving Car Engineer" Nanodegree Program about motion planning and decision making for automomous vehicles.
 
-In this project, you will implement two of the main components of a traditional hierarchical planner: The Behavior Planner and the Motion Planner. 
+## Purpose of This Repo
 
-Both will work in unison to be able to:
-* Avoid static objects (cars, bicycles and trucks) parked on the side of the road (but still invading the lane). The vehicle must avoid crashing with these vehicles by executing either a “nudge” or a “lane change” maneuver.
-* Handle any type of intersection (3-way,  4-way intersections and roundabouts) by STOPPING in all of them (by default)
-* Track the centerline on the traveling lane.
+This repository contains the starter code to launch in the SDC Planning course workspace.
 
-To accomplish this, you will implement:
+## Project Setup Instructions
 
-* Behavioral planning logic using Finite State Machines - FSM
-* Static objects Collision checking.
-* Path and Trajectory generation using Cubic Spirals
-* Best trajectory selection though a cost function evaluation. This cost function will mainly perform a collision check and a proximity check to bring cost higher as we get closer or collide with objects but maintaining a bias to stay closer to the lane center line.
+Follow the series of the commands in the workspace to launch the CARLA simulator:
 
+Open new terminal window:
+```
+su - student
+// Will say permission denied, ignore and continue
+cd /opt/carla-simulator/
+// Launch Carla simulator
+SDL_VIDEODRIVER=offscreen ./CarlaUE4.sh -opengl
+```
 
-WORK IN PROGRESS ...
+Open new terminal window:
+```
+// Clone this repo
+git clone https://github.com/AndiA76/SDCND05_Motion_Planning_and_Decision_Making.git
+cd SDCND05_Motion_Planning_and_Decision_Making/project
+// Install virtual environment
+./install-ubuntu.sh
+// Build executable project files
+cd starter_files/
+cmake .
+make
+// Run executable project files
+cd nd013-c5-planning-refresh/project
+./run_main.sh
+// This will silently fail 
+ctrl + C to stop 
+// Run again ... this time a window should open to visizalize the simulation
+./run_main.sh again
+Go to desktop mode to see CARLA
 
+// If error bind is already in use, or address already being used
+ps -aux | grep carla
+kill id
+```
 
 ## License
 Remarks: Since the the code in this repository was build on the [starter code](https://github.com/udacity/nd013-c5-planning-starter) provided by Udacity, it automatically falls under the Udacity license, too:
