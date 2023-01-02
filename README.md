@@ -3,7 +3,10 @@ Project 5 of Udacity's "Self-Driving Car Engineer" Nanodegree Program about moti
 
 ## Purpose of This Repo
 
-This repository contains the starter code to launch in the SDC Planning course workspace.
+This repository contains the starter code including the extensions to be implemeneted as a student's task to launch in the SDC Planning course workspace and simulate the planner's behavior in
+- avoiding static objects (cars, bicycles and trucks) parked on the side of the road (but still invading the lane). In this case, the ego vehicle is supposed to avoid crashing with these parking vehicles by executing either a “nudge” or a “lane change” maneuver.
+- handling intersections (e.g. 3-way, 4-way intersections and roundabouts) by STOPPING at the stop line (by default).
+- tracking the centerline on the traveling lane.
 
 ## Project Setup Instructions
 
